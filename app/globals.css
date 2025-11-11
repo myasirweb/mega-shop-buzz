@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  /* === Global Theme Colors === */
+  --color-bg: #0b132b; /* navy blue background */
+  --color-border: #1c2541; /* dark navy border */
+  --color-primary-text: #ffffff; /* white text */
+  --color-secondary-text: #d1d5db; /* soft gray */
+  --color-accent: #facc15; /* yellow-400 accent */
+  --color-hover-accent: #eab308; /* yellow-500 hover */
+  --color-card-bg: #1e293b;
+
+  /* === Font Variables === */
+  --font-body: "Inter", Arial, Helvetica, sans-serif;
+  --font-heading: "Poppins", "Inter", sans-serif;
+
+  /* === Footer Specific === */
+  --footer-bg: #0b132b;
+  --footer-border: #1c2541;
+  --footer-text: #d1d5db;
+  --footer-heading: #ffffff;
+
+  /* === Transitions === */
+  --transition-fast: 0.25s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #ffffff;
+    --color-border: #e5e5e5;
+    --color-primary-text: #111827;
+    --color-secondary-text: #555555;
+    --color-accent: #facc15;
+  }
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-primary-text);
+  font-family: var(--font-body);
+  transition: background var(--transition-slow), color var(--transition-slow);
+}
