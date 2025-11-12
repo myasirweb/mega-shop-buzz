@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛍️ Mega Buzz Shop — Modern Blog Website (Next.js + Sanity CMS)
 
-## Getting Started
+![Mega Buzz Shop Screenshot](./public/mega-buzz.png)
 
-First, run the development server:
+**Mega Buzz Shop** is a modern and responsive **blog website** built using **Next.js 14** and powered by **Sanity CMS** for seamless content management.  
+It provides a dynamic platform to explore blogs, categories, and trending content in style — designed for speed, SEO, and scalability.
+
+🔗 **Live Demo:** [https://mega-buzz-shop.vercel.app/](https://mega-buzz-shop.vercel.app/)  
+🧠 **CMS Platform:** [Sanity.io](https://www.sanity.io/)
+
+---
+
+## 🚀 Features
+
+✅ **Modern Next.js 14 App Router Structure**  
+✅ **Sanity CMS Integration** for easy blog management  
+✅ **Dynamic Blog Pages** (Posts, Authors, Categories)  
+✅ **Fully Responsive Design** (Mobile, Tablet, Desktop)  
+✅ **Attractive UI/UX** using **Tailwind CSS**  
+✅ **Email Subscription (EmailJS)** with Toast Notifications  
+✅ **SEO Optimized** (Meta Tags, OG tags, Schema-ready)  
+✅ **Reusable Components** (Header, Footer, Layout, etc.)  
+✅ **Fast Image Optimization** using `next/image`  
+
+---
+
+## 🧩 Tech Stack
+
+| Technology | Purpose |
+|-------------|----------|
+| **Next.js 14** | Frontend framework |
+| **React 18** | UI library |
+| **Sanity CMS** | Headless CMS for content |
+| **Tailwind CSS** | Styling and responsive design |
+| **Lucide Icons** | Lightweight icon set |
+| **EmailJS** | Newsletter and email automation |
+| **Vercel** | Hosting and deployment |
+
+---
+
+## 🛠️ Installation & Setup
+
+Clone the repository and install dependencies:
 
 ```bash
+# Clone the repo
+git clone https://github.com/yourusername/mega-buzz-shop.git
+
+# Navigate to the project
+cd mega-buzz-shop
+
+# Install dependencies
+npm install
+
+
+Start the development server:
+
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser at http://localhost:3000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+⚙️ Environment Variables
 
-## Learn More
+Create a .env.local file in your root directory and add:
 
-To learn more about Next.js, take a look at the following resources:
+NEXT_PUBLIC_SANITY_PROJECT_ID=your_sanity_project_id
+NEXT_PUBLIC_SANITY_DATASET=production
+NEXT_PUBLIC_SANITY_API_VERSION=2023-10-01
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📰 Content Management (Sanity CMS)
 
-## Deploy on Vercel
+Go to Sanity.io
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Manage your blog posts, categories, and authors easily.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Each content update reflects automatically on the website (real-time revalidation).
+
+
+📧 Email Subscription
+
+The website uses EmailJS for collecting user emails in the newsletter section (Footer).
+To activate this feature:
+
+Create a free account on EmailJS
+.
+
+Create a new service and email template.
+
+Add your SERVICE_ID, TEMPLATE_ID, and PUBLIC_KEY in .env.local.
+
+
+🌐 Deployment
+
+Easily deploy to Vercel
+:
+
+Push your code to GitHub.
+
+Connect your repository to Vercel.
+
+Add environment variables under Project Settings → Environment Variables.
+
+Click Deploy 🎉
+
+
+
+👨‍💻 Developer
+
+Designed & Developed by Yasir Dev
+
+💻 Portfolio: yasir-portfolio-nextjs.vercel.app
+
+📂 GitHub: github.com/myasirweb
+
+
+🪪 License
+
+This project is open-source and available

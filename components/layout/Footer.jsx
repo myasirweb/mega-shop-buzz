@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import emailjs from "emailjs-com"; 
+import toast, { Toaster } from "react-hot-toast";
 import {
   Facebook,
   Twitter,
@@ -41,6 +43,36 @@ export default function Footer() {
   const [isLoading, setIsLoading] = useState(true);
   const [email, setEmail] = useState("");
 
+
+   /* ----------------------------------------------------------
+     ✅ Send Email Function with Toast
+  ---------------------------------------------------------- */
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (!email.trim()) {
+      toast.error("Please enter your email address!");
+      return;
+    }
+
+    emailjs
+      .send(
+        "service_zhs7ptv", // your service ID
+        "template_nugjhg9", // your template ID
+        { user_email: email },
+        "ZBaNV2kIfvCxXwHRu" // your public key
+      )
+      .then(
+        () => {
+          setEmail(""); 
+          toast.success("🎉 Thank you for subscribing!");
+        },
+        (error) => {
+          console.error("Email send error:", error);
+          toast.error("❌ Something went wrong. Please try again.");
+        }
+      );
+  };
   /* ----------------------------------------------------------
      Fetch categories and recent posts from Sanity CMS
   ---------------------------------------------------------- */
@@ -182,37 +214,34 @@ export default function Footer() {
             </div>
 
             {/* ========================== Newsletter Section ========================== */}
-            <div className="mt-8">
-              <h4
-                className={`${heading} font-bold text-sm uppercase tracking-wider mb-3`}
-              >
-                Subscribe to Our Newsletter
-              </h4>
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  alert(`Thank you for subscribing, ${email || "friend"}!`);
-                  setEmail("");
-                }}
-                className="flex items-center bg-gray-900 rounded-full overflow-hidden max-w-md border border-gray-800 focus-within:border-amber-500 transition-all duration-300"
-              >
-                <Mail size={15} className="ml-4 text-amber-400" />
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
-                  className="flex-grow bg-transparent px-3 py-3 text-sm text-gray-300 outline-none"
-                />
-                <button
-                  type="submit"
-                  className="bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold px-5 py-3 rounded-r-full transition-colors"
-                >
-                  Subscribe
-                </button>
-              </form>
-            </div>
+              {/* ✅ Newsletter Section */}
+        <div className="mt-8">
+          <h4
+            className={`${heading} font-bold text-sm uppercase tracking-wider mb-3`}
+          >
+            Subscribe to Our Newsletter
+          </h4>
+          <form
+            onSubmit={sendEmail}
+            className="flex items-center bg-gray-900 rounded-full overflow-hidden max-w-md border border-gray-800 focus-within:border-amber-500 transition-all duration-300"
+          >
+            <Mail size={15} className="ml-4 text-amber-400" />
+            <input
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+              className="flex-grow bg-transparent px-3 py-3 text-sm text-gray-300 outline-none"
+            />
+            <button
+              type="submit"
+              className="bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold px-5 py-3 rounded-r-full transition-colors"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
           </div>
 
           {/* ========================== Quick Links ========================== */}
@@ -322,12 +351,23 @@ export default function Footer() {
         {/* ------------------------------------------------------
            Bottom Bar (Legal Links)
         ------------------------------------------------------ */}
-        <div
-          className={`border-t ${border} pt-8 mt-4 flex flex-col md:flex-row justify-between items-center text-sm ${text}`}
+         <div
+          className={`border-t ${border} pt-8 mt-8 flex flex-col md:flex-row justify-between items-center text-sm ${text}`}
         >
-          <p className="order-2 md:order-1 mt-4 md:mt-0">
+          <p className="order-2 md:order-1 mt-4 md:mt-0 text-center">
             &copy; {new Date().getFullYear()} Mega Shop Buzz. All rights
             reserved.
+            <span className="block md:inline md:ml-2">
+              | Designed &amp; Developed by{" "}
+              <a
+                href="https://www.linkedin.com/in/yasirweb/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-amber-400 hover:text-amber-300 font-semibold underline underline-offset-4 decoration-amber-400/70 transition-colors"
+              >
+                Yasir Dev
+              </a>
+            </span>
           </p>
 
           <div className="flex gap-6 order-1 md:order-2">
@@ -340,6 +380,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      {/* Toast Container */}
+      <Toaster position="top-center" reverseOrder={false} />
     </footer>
   );
 }

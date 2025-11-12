@@ -38,12 +38,12 @@ const BlogCard = ({ post }) => (
       </div>
 
       {/* Description */}
-      <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
+      {/* <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
         {post.excerpt || "Read the latest insights and updates from our blog."}
-      </p>
+      </p> */}
 
       {/* Metadata */}
-      <div className="flex justify-between items-center border-t border-gray-100 dark:border-gray-700 pt-3 text-xs text-gray-500 dark:text-gray-400">
+      {/* <div className="flex justify-between items-center border-t border-gray-100 dark:border-gray-700 pt-3 text-xs text-gray-500 dark:text-gray-400">
         <span className="flex items-center">
           <Clock className="w-4 h-4 mr-1 text-yellow-400" />
           {new Date(post.publishedAt || Date.now()).toLocaleDateString()}
@@ -52,7 +52,7 @@ const BlogCard = ({ post }) => (
           <User className="w-4 h-4 mr-1 text-yellow-400" />
           {post.author || "Admin"}
         </span>
-      </div>
+      </div> */}
     </div>
   </Link>
 );
