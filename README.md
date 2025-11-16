@@ -125,15 +125,8 @@ Contributing
 
 Contributions are welcome! Please create a pull request or open an issue if you encounter any bugs or have suggestions for improvements.
 
-
-## Important Notes:
-
-1. **Ensure LICENSE file exists** - Repository ke root mein `LICENSE` naam ki file honi chahiye
-2. **No extra spaces** - Link ke around extra spaces na hone dein
-3. **Case sensitivity** - `LICENSE` capital letters mein hona chahiye
-4. **File extension** - Agar file `LICENSE.txt` hai toh `[MIT License](LICENSE.txt)` use karein
-
-Yeh solutions try karne ke baad bhi agar issue rahe toh batayein!
+🪪 License
+This project is licensed under the MIT License.
 
 
 
