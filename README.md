@@ -5,8 +5,8 @@
 **Mega Buzz Shop** is a modern and responsive **blog website** built using **Next.js 14** and powered by **Sanity CMS** for seamless content management.  
 It provides a dynamic platform to explore blogs, categories, and trending content in style — designed for speed, SEO, and scalability.
 
-🔗 **Live Demo:** [https://mega-buzz-shop.vercel.app/](https://mega-buzz-shop.vercel.app/)  
-🧠 **CMS Platform:** [Sanity.io](https://www.sanity.io/)
+🔗 Live Demo: https://www.megashopbuzz.com/
+🧠 CMS Platform: Sanity.io
 
 ---
 
@@ -121,7 +121,11 @@ Designed & Developed by Yasir Dev
 
 📂 GitHub: github.com/myasirweb
 
+Contributing
+
+Contributions are welcome! Please create a pull request or open an issue if you encounter any bugs or have suggestions for improvements.
 
 🪪 License
 
-This project is open-source and available
+This project is licensed under the MIT License — see the LICENSE
+ file for details.
