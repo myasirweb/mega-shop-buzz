@@ -127,7 +127,8 @@ Contributions are welcome! Please create a pull request or open an issue if you 
 
 ## 🪪 License
 
-This project is licensed under the [MIT License](./LICENSE).
+This project is licensed under the [MIT License](LICENSE).
+
 
 
 
