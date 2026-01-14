@@ -3,7 +3,7 @@ import path from "path";
 
 /** @type {import('next').NextConfig} */
 
-// __dirname ko manually define karte hain for ESM
+// __dirname for ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -11,13 +11,22 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  experimental: {
-    outputFileTracingRoot: __dirname,
-  },
 
-  // ✅ Allow Sanity & Placeholder image domains
+  // ✅ This must NOT be inside experimental in Next 15
+  outputFileTracingRoot: __dirname,
+
+  // ✅ Allow Sanity & placeholder images
   images: {
-    domains: ["cdn.sanity.io", "placehold.co"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+      },
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+      },
+    ],
   },
 };
 
