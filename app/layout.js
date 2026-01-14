@@ -69,6 +69,9 @@ export default function RootLayout({ children }) {
           content="PsYHwCgWxmbwEYYou-_HRLdAivf3L9KUe2D7A5RlklE"
         />
 
+         {/* ✅ Admitad Verification */}
+  <meta name="verify-admitad" content="4cf68752d8" />
+
         {/* ✅ Google Analytics */}
         <script
           async
