@@ -53,7 +53,7 @@ export default function CouponModal({ coupon, storeLogo, storeName, affiliateLin
         {/* Top row: logo + store name + coupon title */}
         <div className="flex items-center gap-3 mb-4 pr-8">
           {logoUrl ? (
-            <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center overflow-hidden p-1 border border-gray-700 shrink-0">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden border border-white/30 shrink-0">
               <img src={logoUrl} alt={storeName} className="w-full h-full object-contain" />
             </div>
           ) : (
