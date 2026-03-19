@@ -63,16 +63,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* ✅ Google Site Verification */}
+        {/*  Google Site Verification */}
         <meta
           name="google-site-verification"
           content="PsYHwCgWxmbwEYYou-_HRLdAivf3L9KUe2D7A5RlklE"
         />
 
-         {/* ✅ Admitad Verification */}
+         {/*  Admitad Verification */}
   <meta name="verify-admitad" content="4cf68752d8" />
 
-        {/* ✅ Google Analytics */}
+        {/*  Google Analytics */}
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-EE7FX1V987"
@@ -89,7 +89,7 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        {/* ✅ JSON-LD Structured Data */}
+        {/*  JSON-LD Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
