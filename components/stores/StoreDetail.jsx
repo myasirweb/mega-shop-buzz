@@ -44,9 +44,9 @@ function CouponCard({ coupon, storeLogo, storeName, affiliateLink }) {
       <div className="bg-gray-900 border border-gray-800 rounded-2xl hover:shadow-xl hover:shadow-yellow-400/5 hover:-translate-y-0.5 transition-all duration-300 flex items-stretch overflow-hidden">
 
         {/* Left: store logo thumbnail */}
-        <div className="flex items-center justify-center w-24 shrink-0 bg-white border-r border-gray-800 p-3">
+        <div className="flex items-center justify-center w-24 shrink-0 border-r border-white/30 overflow-hidden">
           {logoUrl ? (
-            <img src={logoUrl} alt={storeName} className="w-14 h-14 object-contain" />
+            <img src={logoUrl} alt={storeName} className="w-full h-full object-contain" />
           ) : (
             <div className="w-14 h-14 rounded-full bg-yellow-400 flex items-center justify-center text-black font-bold text-lg">
               {storeName?.charAt(0)?.toUpperCase() || "S"}
@@ -251,7 +251,7 @@ export default function StoreDetail({ slug }) {
             {/* Logo */}
             <div className="flex justify-center mb-4">
               {logoSmUrl ? (
-                <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center overflow-hidden border border-gray-700 p-1">
+                <div className="w-20 h-20 rounded-xl flex items-center justify-center overflow-hidden border border-white/30">
                   <img src={logoSmUrl} alt={store.name} className="w-full h-full object-contain" />
                 </div>
               ) : (
@@ -319,7 +319,7 @@ export default function StoreDetail({ slug }) {
           {/* Store header card */}
           <div className="bg-gray-900 border border-gray-800 rounded-2xl p-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
             {/* Logo */}
-            <div className="shrink-0 w-24 h-24 bg-white border border-gray-700 rounded-2xl flex items-center justify-center overflow-hidden p-2">
+            <div className="shrink-0 w-24 h-24 border border-white/30 rounded-2xl flex items-center justify-center overflow-hidden">
               {logoUrl ? (
                 <img src={logoUrl} alt={`${store.name} logo`} className="w-full h-full object-contain" />
               ) : (

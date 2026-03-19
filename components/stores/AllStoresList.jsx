@@ -35,14 +35,14 @@ function StoreCard({ store }) {
                  hover:shadow-2xl hover:border-gray-200 dark:hover:border-gray-700"
     >
       {/* Image container — same classes as category card */}
-      <div className="relative w-full h-72 sm:h-64 md:h-72 overflow-hidden rounded-t-2xl bg-gray-100 dark:bg-gray-800">
+      <div className="relative w-full h-72 sm:h-64 md:h-72 overflow-hidden rounded-lg border border-white/30">
         {logoUrl ? (
           <Image
             src={logoUrl}
             alt={store.name}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
-            className="object-contain p-10 transition-transform duration-700 ease-out group-hover:scale-110"
+            className="object-contain transition-transform duration-700 ease-out group-hover:scale-110"
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-800">
