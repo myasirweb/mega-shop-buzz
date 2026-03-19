@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm audit:*)",
+      "Bash(node -e \"const pkg = require\\(''./node_modules/next/package.json''\\); console.log\\(pkg.version\\)\")",
+      "Bash(npm run:*)"
+    ]
+  }
+}
