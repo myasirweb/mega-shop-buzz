@@ -256,6 +256,7 @@ export default function Footer() {
                 { href: "/", label: "Home" },
                 { href: "/all-blogs", label: "All Blogs" },
                 { href: "/categories", label: "Categories" },
+                { href: "/stores", label: "Stores" },
               ].map(({ href, label }, index) => (
                 <li key={index}>
                   <Link

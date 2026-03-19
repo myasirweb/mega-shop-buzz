@@ -49,6 +49,7 @@ export default function Header() {
     { href: "/", label: "Home" },
     { href: "/categories", label: "All Categories" },
     { href: "/all-blogs", label: "All Blogs" },
+    { href: "/stores", label: "Stores" },
   ];
 
   /* ===== Social Links ===== */
