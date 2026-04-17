@@ -128,7 +128,3 @@ Contributions are welcome! Please create a pull request or open an issue if you 
  LICENSE
 
 This project is licensed under the [MIT License](./LICENSE).
-
-
-
-
